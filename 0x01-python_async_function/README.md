@@ -77,4 +77,29 @@ simontagbor@ubuntu:~/0x01$ ./2-main.py
 1.4292458079755306
     
 ```
+### 3. Tasks
+In this task I wrote a function called `task_wait_random` that takes an integer `max_delay` and returns a asyncio.Task.
+
+#### output
+```
+simontagbor@ubuntu:~/0x01$ cat 3-main.py
+#!/usr/bin/env python3
+'''
+Test file for printing the correct output of the task_wait_random coroutine
+'''
+import asyncio
+
+task_wait_random = __import__('3-tasks').task_wait_random
+
+
+async def test(max_delay: int) -> float:
+    task = task_wait_random(max_delay)
+    await task
+    print(task.__class__)
+
+asyncio.run(test(5))
+
+simontagbor@ubuntu:~/0x01$ ./3-main.py
+<class '_asyncio.Task'>
+```
 
