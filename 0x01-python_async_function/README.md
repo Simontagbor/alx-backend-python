@@ -56,4 +56,25 @@ simontagbor@ubuntu:~/0x01$ ./1-main.py
 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
 ```
+### 2. Measure the runtime
+In this task I wrote a function called `measure_time` that measures the total execution time for `wait_n(n, max_delay)`. It returns `total_time / n`. Your function should return a float.
+
+#### output
+```
+simontagbor@ubuntu:~/0x01$ cat 2-main.py
+#!/usr/bin/env python3
+'''
+Test file for printing the correct output of the measure_time coroutine
+'''
+measure_time = __import__('2-measure_runtime').measure_time
+
+n = 5
+max_delay = 9
+
+print(measure_time(n, max_delay))
+
+simontagbor@ubuntu:~/0x01$ ./2-main.py
+1.4292458079755306
+    
+```
 
