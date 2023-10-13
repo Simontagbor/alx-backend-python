@@ -10,7 +10,7 @@ import asyncio
 import random
 
 
-async def async_generator() -> None:
+async def async_generator() -> float:
     """
     Loops Ten times with 10 yields of random floats.
 
