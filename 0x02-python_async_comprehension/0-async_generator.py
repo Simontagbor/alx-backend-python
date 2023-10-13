@@ -17,8 +17,9 @@ async def async_generator() -> AsyncGenerator[float, None]:
 
     Args:
         None:
-    Returns:
-        None
+
+    Yields:
+        float: Random floats
     """
     for _ in range(0, 10):
         await asyncio.sleep(1)
