@@ -4,15 +4,15 @@ from typing import Tuple, List
 
 
 def zoom_array(
-    lst: Tuple[int, ...],
+    lst: Tuple,
     factor: int = 2
-) -> Tuple[int, ...]:
-    """This function returns a tuple"""
-    zoomed_in: Tuple[int, ...] = tuple(
+) -> List:
+    """This function returns a list"""
+    zoomed_in: List = [
         item
         for item in lst
         for _ in range(factor)
-    )
+    ]
     return zoomed_in
 
 
