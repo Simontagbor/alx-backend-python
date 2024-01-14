@@ -52,12 +52,17 @@ class TestMemoize(unittest.TestCase):
         a_method is only called once."""
 
         class TestClass:
-            """Test class for memoization."""
+            """Test class for memoization.
+            the correct result is returned but
+            a_method is only called once.
+            """
             def a_method(self):
+                """a_method for testing"""
                 return 42
 
             @utils.memoize
             def a_property(self):
+                """a_property for testing"""
                 return self.a_method()
 
         with patch.object(TestClass, 'a_method',
