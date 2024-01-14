@@ -3,11 +3,13 @@
 from typing import TypeVar, Dict
 
 
-KT = TypeVar('KT')
-VT = TypeVar('VT')
+T = TypeVar('T')
 
 
-def safely_get_value(dct: Dict[KT, VT], key: KT, default: VT = None) -> VT:
+def safely_get_value(dct: Mapping, key: Any,
+                     default: Union[T, None] =
+                     None) -> Union[Any, T]:
+    """Return value of key or default"""
     if key in dct:
         return dct[key]
     else:
